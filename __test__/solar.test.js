@@ -6,30 +6,14 @@ import Conversions from "../src/solar.js";
 //     this.age = age;
 // }
 
-// mercuryAge(){
-//     return this.age / 0.24;
-// }
-
-// venusAge() {
-//     return this.age / 0.62;
-// }
 
 
-//describe('SolarConversions', () =>{
-  //  test('return inpu age in mercurian years', () => {
-        
-       //parseExpectedArgs(this.age.mercuryAge).toEqual()
-
-  ////  })
-
-//}/)
-
-describe("Conversions", () => {
-  test("Returns age in Mercury years", () => {
-    const erik = new Conversions (30);
-    expect(this.age).toEqual(30);
-    });
-  });
-  
-  //   const mercuryAge = erik.age / 0.24;
-// expect(calculateMercuryAge(age)).toEqual(mercuryAge);
+  const calculateAgeOnOtherPlanets =('./calculateAgeOnOtherPlanets');
+  function calculateAgeOnOtherPlanets(ageInYears) {
+describe('calculateAgeOnOtherPlanets', () => {
+  test ('returns the correct age on Mercury', () => {
+    const ageInYears = 30;
+    const expectedAge = ageInYears / 0.24; // Calculated based on Mercury's orbital period
+    const result = calculateAgeOnOtherPlanets(ageInYears, 'mercury');
+    expect(result).toBeCloseTo(expectedAge);
+  })
